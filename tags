@@ -1,0 +1,20 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/0c78c0c4/
+Rust Notes	notes.md	/^# Rust Notes$/;"	c
+SessionLoad	Session.vim	/^let SessionLoad = 1$/;"	v
+g:this_obsession	Session.vim	/^let g:this_obsession = v:this_session$/;"	v
+g:this_session	Session.vim	/^let g:this_session = v:this_session$/;"	v
+main	src/main.rs	/^fn main() {$/;"	f
+s:l	Session.vim	/^let s:l = 1 - ((0 * winheight(0) + 17) \/ 34)$/;"	v
+s:l	Session.vim	/^let s:l = 3 - ((2 * winheight(0) + 34) \/ 69)$/;"	v
+s:l	Session.vim	/^let s:l = 5 - ((4 * winheight(0) + 34) \/ 69)$/;"	v
+s:so_save	Session.vim	/^let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0$/;"	v
+s:sx	Session.vim	/^let s:sx = expand("<sfile>:p:r")."x.vim"$/;"	v
+s:wipebuf	Session.vim	/^  let s:wipebuf = bufnr('%')$/;"	v
