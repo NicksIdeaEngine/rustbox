@@ -11,10 +11,10 @@ badd +1 /mnt/sdc1/dbx/proj/rustbox
 badd +1 hello.rs
 badd +1 notes.md
 badd +1 src/main.rs
-badd +1 .gitignore
+badd +4 .gitignore
 badd +1 Cargo.toml
 badd +1 term://.//249860:/bin/zsh
-badd +1 term://.//327294:/bin/zsh
+badd +30 term://.//327294:/bin/zsh
 argglobal
 %argdel
 $argadd /mnt/sdc1/dbx/proj/rustbox
@@ -26,10 +26,6 @@ wincmd _ | wincmd |
 vsplit
 2wincmd h
 wincmd w
-wincmd _ | wincmd |
-split
-1wincmd k
-wincmd w
 wincmd w
 wincmd t
 set winminheight=0
@@ -37,13 +33,10 @@ set winheight=1
 set winminwidth=0
 set winwidth=1
 exe 'vert 1resize ' . ((&columns * 85 + 128) / 256)
-exe '2resize ' . ((&lines * 34 + 35) / 71)
 exe 'vert 2resize ' . ((&columns * 85 + 128) / 256)
-exe '3resize ' . ((&lines * 34 + 35) / 71)
-exe 'vert 3resize ' . ((&columns * 85 + 128) / 256)
-exe 'vert 4resize ' . ((&columns * 84 + 128) / 256)
-exe '5resize ' . ((&lines * 27 + 35) / 71)
-exe 'vert 5resize ' . ((&columns * 85 + 128) / 256)
+exe 'vert 3resize ' . ((&columns * 84 + 128) / 256)
+exe '4resize ' . ((&lines * 27 + 35) / 71)
+exe 'vert 4resize ' . ((&columns * 85 + 128) / 256)
 argglobal
 setlocal fdm=marker
 setlocal fde=0
@@ -71,30 +64,12 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=10
 setlocal fen
-let s:l = 1 - ((0 * winheight(0) + 17) / 34)
+let s:l = 4 - ((3 * winheight(0) + 34) / 69)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-1
-normal! 0
-lcd /mnt/sdc1/dbx/proj/rustbox
-wincmd w
-argglobal
-if bufexists("/mnt/sdc1/dbx/proj/rustbox/Cargo.toml") | buffer /mnt/sdc1/dbx/proj/rustbox/Cargo.toml | else | edit /mnt/sdc1/dbx/proj/rustbox/Cargo.toml | endif
-setlocal fdm=marker
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=10
-setlocal fen
-let s:l = 1 - ((0 * winheight(0) + 17) / 34)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-1
-normal! 0
+4
+normal! 010|
 lcd /mnt/sdc1/dbx/proj/rustbox
 wincmd w
 argglobal
@@ -133,15 +108,12 @@ normal! zt
 normal! 0
 lcd /mnt/sdc1/dbx/proj/rustbox
 wincmd w
-5wincmd w
+4wincmd w
 exe 'vert 1resize ' . ((&columns * 85 + 128) / 256)
-exe '2resize ' . ((&lines * 34 + 35) / 71)
 exe 'vert 2resize ' . ((&columns * 85 + 128) / 256)
-exe '3resize ' . ((&lines * 34 + 35) / 71)
-exe 'vert 3resize ' . ((&columns * 85 + 128) / 256)
-exe 'vert 4resize ' . ((&columns * 84 + 128) / 256)
-exe '5resize ' . ((&lines * 27 + 35) / 71)
-exe 'vert 5resize ' . ((&columns * 85 + 128) / 256)
+exe 'vert 3resize ' . ((&columns * 84 + 128) / 256)
+exe '4resize ' . ((&lines * 27 + 35) / 71)
+exe 'vert 4resize ' . ((&columns * 85 + 128) / 256)
 tabnext 1
 if exists('s:wipebuf') && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
